@@ -46,12 +46,14 @@ curl_close($ch);
 </head>
 
 <main>
-    <pre >
+    <pre>
         <?php var_dump($data); ?>
     </pre>
-    <section >
+    <section>
         <h2>La próxima película de Marvel</h2>
-        <img class = "img" src="<?= $data["poster_url"]; ?>" alt= "Poster de <?= $data["title"]; ?>" />
+        <div class="image-container">
+            <img class="img" src="<?= $data["poster_url"]; ?>" alt="Poster de <?= $data["title"]; ?>" />
+        </div>
     </section>
     <hgroup>
         <h2><?= $data["title"]; ?> se estrena en <?= $data["days_until"]; ?> días.</h2>
